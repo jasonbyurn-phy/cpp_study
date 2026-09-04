@@ -1,5 +1,9 @@
 #include <string>
 using std::string;
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
 
 string s1; // default initialization; s1 is the empty string
 string s2 = s1; // s2 is a copy of s1
@@ -11,8 +15,7 @@ string s6("hiya"); // directi initialization
 string s7(10, 'c'); // directi initialization; s7 is cccccccccc
 string s8 = string(10, 'c'); // copy initialization
 
-#include <iostream>
-using std::cin, using std::cout;
+
 int main()
 {
     // string s; // empty string
@@ -25,8 +28,14 @@ int main()
     // cout << s1 << s2 << endl; // write both strings
     // return 0;
 
-    string word;
-    whild (cin >> word) // read until end-of-file
-    cout << word << endl; // write each word followd by a new line
-    return 0;
+    // string word;
+    // while (cin >> word) // read until end-of-file
+    // cout << word << endl; // write each word followd by a new line
+    // return 0;
+
+    string line;
+    // read input a line at a time until end-of-file
+    while (getline(cin, line))
+    cout << line << endl;
+return 0;
 }
